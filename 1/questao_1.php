@@ -5,7 +5,7 @@ function calcularTotalComDesconto(array $precos, float $desconto): float {
     $total = 0;
 
     foreach ($precos as $preco) {
-        $precoDesc = $preco * (1 - $desconto);
+        $precoDesc = $preco - ($preco - $desconto);
         $total += $precoDesc;
     }
     return $total;
